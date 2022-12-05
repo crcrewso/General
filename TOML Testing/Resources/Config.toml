@@ -1,0 +1,12 @@
+﻿
+title = "VMAT TOML Config file"
+
+[Flash]
+Use_Flash = true
+Type = "Global"
+Margin = 0.5
+
+[Target]
+Margin = 0.3
+
+

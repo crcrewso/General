@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOML Testing", "TOML Testing.csproj", "{C927C39E-350E-454E-A27D-8F17947413E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamlTesting", "..\YamlTesting\YamlTesting.csproj", "{487DE878-C49E-41B2-BA2E-0CBC92BA9F50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C927C39E-350E-454E-A27D-8F17947413E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C927C39E-350E-454E-A27D-8F17947413E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C927C39E-350E-454E-A27D-8F17947413E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C927C39E-350E-454E-A27D-8F17947413E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487DE878-C49E-41B2-BA2E-0CBC92BA9F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487DE878-C49E-41B2-BA2E-0CBC92BA9F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487DE878-C49E-41B2-BA2E-0CBC92BA9F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487DE878-C49E-41B2-BA2E-0CBC92BA9F50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D822D460-D5EA-4F79-BC66-CF52985310B9}
+	EndGlobalSection
+EndGlobal
