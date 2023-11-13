@@ -1,0 +1,55 @@
+# VMAT TBI Configuration File
+# All Lenghts are in cm
+[General]
+updated = "2023-09-15"
+docPath = '\\svstorotst01\va_data$\ProgramData\Vision\PublishedScripts\VMAT_TBI\documentation'
+logPath = '\\svstorotst01\va_data$\ProgramData\Vision\PublishedScripts\VMAT_TBI\logs'
+closeOnFinish = true # Close Progress Windows on finish
+
+[Site]
+Linac = [
+	"TrueBeam1CC" ,
+	"Clinac1CC-2" ,
+	"Mirage" ,
+	"Solstice",
+]
+Energy = [
+	"6X" , 
+	"10X"
+]
+
+[Calculation]
+restartLevel = "MR3" # What MR level should the optimizer restart at from intermediate dose
+calcModelName = "AAA_15605"
+optModelName = "PO_15605"
+
+[Margins]
+target = 0.3
+flash = 0.5
+overlap = 1.0
+
+[Defaults]
+gpuDose = false # Use GPU's for Calculting
+gpuOpti = false # Use GPU's for Optimizing
+flash = true 
+flashType = "Global" 
+overlap = true # contour field overlap
+#add tuning structures (Human_Body, PTV_Body, and TS_PTV_VMAT MUST be present in this list!)
+#syntax: DICOM type (all caps), structure
+TuningStructures = [
+	["CONTROL" , "Human_Body"], 
+	["PTV" , "PTV_Body"],
+]
+[PlanParameters]
+beamsPerIso = [4, 3, 3, 2, 2, 2]
+#collimator rotations for the beams (the order of these matters)
+#Varian IEC 1217 coordinates
+collRot = [6, 354, 84, 96]
+#Beam jaw positions (the order of these jaw positions correspond to the order of the collimator rotations specified above)
+#The number of entries here should match the number of collimator rotation entries
+jawPossitions = [
+	[-20.0,-200.0,200.0,200.0], 
+	[-200.0,-200.0,20.0,200.0] ,
+	[-200.0,-200.0,0.0,200.0] ,
+	[0.0,-200.0,200.0,200.0] 
+]

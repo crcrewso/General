@@ -1,0 +1,38 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!csharp
+
+#r "nuget:Salaros.ConfigParser"
+using System.IO;
+using Salaros.Configuration;
+using System.Globalization;
+using Microsoft.Extensions.Configuration;
+
+#!csharp
+
+var configFile = "./VMAT_TBI_config.ini";
+var parser = new ConfigParser(configFile, new ConfigParserSettings
+            {
+                MultiLineValues = MultiLineValues.Simple,
+                Encoding = Encoding.UTF8,
+                Culture = new CultureInfo("en-US"),
+                BooleanConverter = new YesNoConverter("true", "false")
+            });
+
+#!csharp
+
+var sections = parser.Sections;
+
+#!csharp
+
+var linacs = parser.GetArrayValue("Site", "linac");
+
+#!csharp
+
+var isos = parser.GetValue("PlanParameters", "beamsPerIso");
+
+#!csharp
+
+var mecINIparser = 

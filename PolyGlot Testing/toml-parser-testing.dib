@@ -1,0 +1,25 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!csharp
+
+#r "nuget:tommy"
+
+#!csharp
+
+using System.IO;
+using Tommy;
+
+#!csharp
+
+var tomlFile = "./test.toml";
+StreamReader reader = File.OpenText(tomlFile);
+TomlTable table = TOML.Parse(reader);
+Console.WriteLine(table["General"]["updated"].ToString());
+Console.WriteLine(table["Site"]["Linac"].ToString());
+
+#!csharp
+
+var site = model["Site"];
+var linacs = ((TomlArray)model["Site"]!)["Linac"];
